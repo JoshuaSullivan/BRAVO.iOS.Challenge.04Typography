@@ -7,9 +7,10 @@
 //
 
 #import "NRDViewController.h"
+#import <CoreText/SFNTLayoutTypes.h>
 
 const double kMillilitersPerHogshead = 238480.942;
-NSString *const kStringTemplate = @"There are %@ milliliters in a hogshead.";
+NSString *const kStringTemplate = @"There are %@\nmilliliters in a hogshead.";
 NSString *const kFontName = @"HoeflerText-Regular";
 const CGFloat kKerningAmount = -20.0f;
 const CGFloat kLineSpacingFactor = 0.25f;
@@ -31,8 +32,6 @@ const CGFloat kLineSpacingFactor = 0.25f;
     self.formatter.groupingSize = 3;
     self.formatter.usesGroupingSeparator = YES;
     self.formatter.numberStyle = NSNumberFormatterDecimalStyle;
-    
-    
 
     [self updateLabel];
     
@@ -51,7 +50,7 @@ const CGFloat kLineSpacingFactor = 0.25f;
 {
     UIFont *preferredFont = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
     CGFloat fontSize = preferredFont.pointSize;
-    UIFont *labelFont = [UIFont fontWithName:kFontName size:fontSize];
+    UIFont *labelFont = [self modifyFont:[UIFont fontWithName:kFontName size:fontSize]];
     
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     paragraphStyle.lineSpacing = kLineSpacingFactor * fontSize;
@@ -67,6 +66,18 @@ const CGFloat kLineSpacingFactor = 0.25f;
     NSAttributedString *labelAttribString = [[NSAttributedString alloc] initWithString:labelString
                                                                             attributes:attributes];
     self.label.attributedText = labelAttribString;
+}
+
+- (UIFont *)modifyFont:(UIFont *)font
+{
+    UIFontDescriptor *baseDescriptor = font.fontDescriptor;
+    
+    NSArray *fontFeatures = @[@{UIFontFeatureTypeIdentifierKey:@(kNumberCaseType),
+                                UIFontFeatureSelectorIdentifierKey:@(kUpperCaseNumbersSelector)}];
+    
+    UIFontDescriptor *modifiedDescriptor = [baseDescriptor fontDescriptorByAddingAttributes:@{UIFontDescriptorFeatureSettingsAttribute: fontFeatures}];
+    
+    return [UIFont fontWithDescriptor:modifiedDescriptor size:0.0f];
 }
 
 - (void)didReceiveMemoryWarning

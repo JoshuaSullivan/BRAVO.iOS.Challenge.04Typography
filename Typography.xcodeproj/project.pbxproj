@@ -54,6 +54,7 @@
 		580F67691885904E005F118C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5897C42F188DCEF70026735D /* NRDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRDViewController.h; sourceTree = "<group>"; };
 		5897C430188DCEF70026735D /* NRDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRDViewController.m; sourceTree = "<group>"; };
+		BC5B0B5918A096AE004B6711 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		E36415D6A6B341D9A87477C0 /* Settings.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = Typography/Resources/Settings.bundle; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -138,6 +139,7 @@
 		580F673318858E88005F118C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC5B0B5918A096AE004B6711 /* CoreText.framework */,
 				580F673418858E88005F118C /* Foundation.framework */,
 				580F673618858E88005F118C /* CoreGraphics.framework */,
 				580F673818858E88005F118C /* UIKit.framework */,

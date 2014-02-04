@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="QTf-pg-s1G">
-                                <rect key="frame" x="60" y="276" width="200" height="17"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="QTf-pg-s1G">
+                                <rect key="frame" x="20" y="276" width="280" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -26,10 +26,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="QTf-pg-s1G" secondAttribute="trailing" constant="60" id="1lP-z4-E0a"/>
+                            <constraint firstAttribute="trailing" secondItem="QTf-pg-s1G" secondAttribute="trailing" constant="20" symbolic="YES" id="1lP-z4-E0a"/>
                             <constraint firstAttribute="centerY" secondItem="QTf-pg-s1G" secondAttribute="centerY" id="2db-Ms-VeI"/>
                             <constraint firstAttribute="centerX" secondItem="QTf-pg-s1G" secondAttribute="centerX" id="Yb1-f6-jNF"/>
-                            <constraint firstItem="QTf-pg-s1G" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="60" id="b9l-QW-NHy"/>
+                            <constraint firstItem="QTf-pg-s1G" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="b9l-QW-NHy"/>
                         </constraints>
                     </view>
                     <connections>
